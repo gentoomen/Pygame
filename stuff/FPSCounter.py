@@ -9,6 +9,8 @@ class FPSCounter:
         self.font = pygame.font.Font(None, 25)
         self.last_time = time.time()
     def update_draw(self, x, y):
+    	if not time.time() - self.last_time > 1:
+        	return
     	self.game.cls()
         self.last_time = time.time()
         text = self.font.render('FPS: %d' % (self.current), True, (0, 0, 0))
