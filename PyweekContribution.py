@@ -19,8 +19,9 @@ class PyweekContribution:
                 self.running = False
     def update_draw(self):
         # self.cls() # cls
-        # self.screen.blit(derp, (x, y))
-        pygame.display.flip() # draw stuff
+        # self.screen.blit(derp, (x, y)) # draw stuff
+        
+        pygame.display.flip()
     def update_clock(self):
         self.clock.tick(self.fps)
 
@@ -31,7 +32,7 @@ if __name__ == '__main__':
     game.cls()
     
     while game.running:
-        fpscounter.update_draw(50, 50)
+        fpscounter.update_draw(100, 50)
         game.update_draw()
         game.update_clock()
         game.update_input()
