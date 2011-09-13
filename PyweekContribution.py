@@ -27,13 +27,10 @@ class PyweekContribution:
 
 if __name__ == '__main__':
     game = PyweekContribution()
-    fpscounter = FPSCounter.FPSCounter(game)
     
     game.cls()
     
     while game.running:
-        fpscounter.update_draw(100, 50)
         game.update_draw()
         game.update_clock()
         game.update_input()
-        fpscounter.update_fps_count()
