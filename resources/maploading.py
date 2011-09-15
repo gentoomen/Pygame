@@ -32,6 +32,6 @@ class Map(  ):
     def width( self ):
         return len(self.data[0])
     def at( self, x, y ):
-        if x or y < 0 or x > self.width or y > self.height:
-            return MapCell("0")
-        return self.data[x][y]
+        if x < 0 or y < 0 or x > self.width or y > self.height:
+            return MapCell("1")
+        return self.data[y][x]
