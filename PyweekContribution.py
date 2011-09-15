@@ -12,7 +12,7 @@ class PyweekContribution:
         self.fps = 60
         self.clock = pygame.time.Clock()
     def cls(self):
-    	self.screen.fill((255,255,255))
+        self.screen.fill((255,255,255))
     def update_input(self):
         for event in pygame.event.get():
             if event.type == QUIT:
