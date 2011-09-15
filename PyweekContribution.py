@@ -1,7 +1,7 @@
 
 import pygame
 from pygame.locals import * # only needed for the 'QUIT' constant
-from stuff import *
+from resources import *
 
 class PyweekContribution:
     def __init__(self):
@@ -20,7 +20,6 @@ class PyweekContribution:
     def update_draw(self):
         # self.cls() # cls
         # self.screen.blit(derp, (x, y)) # draw stuff
-        
         pygame.display.flip()
     def update_clock(self):
         self.clock.tick(self.fps)

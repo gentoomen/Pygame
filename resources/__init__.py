@@ -1,3 +1,4 @@
 
 import sounds
-import cam
+import camera
+import maploading
