@@ -1,11 +1,11 @@
 
 blocks = {
     "0" : {
-        "solid" : True,
-        "transparent" : 0,
+        "solid" : False, # I really don't think 'space' should be solid.
+        "transparent" : 1, # I guess...
         "material" : "space.png",
         "damage" : 0,
-        "health" : 1000000
+        "health" : 1000000 # I don't know about this man.
     },
     "1" : {
         "solid" : True,
