@@ -24,7 +24,11 @@ def LoadMapFromFile( file ):
 class Map(  ):
     def __init__( self, data_array ):
         self.data = data_array
-    def height():
+    def height(self):
         return len(self.data)
-    def width():
+    def width(self):
         return len(self.data.first)
+    def at(self, x, y):
+        if x or y < 0 or x > self.width or y > self.height:
+            return MapCell(blocks.blocks["0"])
+        return self.data[x][y]

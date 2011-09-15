@@ -20,6 +20,11 @@ class PyweekContribution:
     def update_draw(self):
         # self.cls() # cls
         # self.screen.blit(derp, (x, y)) # draw stuff
+        
+        # draw map
+        # draw entities
+        # draw character
+        
         pygame.display.flip()
     def update_clock(self):
         self.clock.tick(self.fps)
