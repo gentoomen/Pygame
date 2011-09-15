@@ -1,17 +1,20 @@
 
 import blocks
 import pygame
+import os
 
 class MapCell(  ):
     def __init__( self, value ):
+        #print(value)
         blockdata = blocks.blocks[value]
         self.solid = blockdata["solid"]
         self.transparent = blockdata["transparent"]
         self.material = blockdata["material"]
-        self.image = pygame.image.load(os.path.join("images", self.material))
+        self.image = pygame.image.load(os.path.abspath(os.path.join("resources", "images", self.material)))
         self.damage = blockdata["damage"]
         self.health = blockdata["health"]
 def LoadMapFromFile( file ):
+    file = os.path.abspath(os.path.join("resources", "maps", file))
     raw = open( file ).read()
     raw = raw.split("\n") # rows - y
     data = []
@@ -24,11 +27,11 @@ def LoadMapFromFile( file ):
 class Map(  ):
     def __init__( self, data_array ):
         self.data = data_array
-    def height(self):
+    def height( self ):
         return len(self.data)
-    def width(self):
-        return len(self.data.first)
-    def at(self, x, y):
+    def width( self ):
+        return len(self.data[0])
+    def at( self, x, y ):
         if x or y < 0 or x > self.width or y > self.height:
-            return MapCell(blocks.blocks["0"])
+            return MapCell("0")
         return self.data[x][y]

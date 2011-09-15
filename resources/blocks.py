@@ -3,7 +3,7 @@ blocks = {
     "0" : {
         "solid" : True,
         "transparent" : 0,
-        "material" : "space.jpg",
+        "material" : "space.png",
         "damage" : 0,
         "health" : 1000000
     },

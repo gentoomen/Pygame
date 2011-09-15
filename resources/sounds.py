@@ -15,7 +15,10 @@ sounds = {}
 # now we can do:
 # 
 # import random
-# random.choice(sounds["boom"]).play()
+# import sounds
+# if explosion():
+#     random.choice(sounds.sounds["boom"]).play()
+#
 # NOTE: maybe automate this process
 sounds["boom"] = []
 sounds["boom"].append(loadsound("boom1"))
